@@ -1,0 +1,12 @@
+# Rust build output
+/target/
+**/target/
+Cargo.lock
+
+# Claude local settings
+.claude/settings.local.json
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+*.swp

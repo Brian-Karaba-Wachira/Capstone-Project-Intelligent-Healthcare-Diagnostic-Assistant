@@ -1,0 +1,37 @@
+[package]
+name    = "brain"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "brain"
+path = "src/main.rs"
+
+[dependencies]
+monoio        = { version = "0.2.4", features = ["macros", "utils", "sync"] }
+bytes         = "1"
+httparse      = "1"
+serde         = { version = "1", features = ["derive"] }
+serde_json    = "1"
+flume         = "0.12.0"
+uuid          = { version = "1", features = ["v4"] }
+rusqlite      = { version = "0.40.1", features = ["bundled"] }
+log           = "0.4"
+env_logger    = "0.11"
+ctrlc         = "3"
+ureq          = { version = "3.3.0", features = ["json"] }
+rust-embed    = { version = "8", features = ["interpolate-folder-path"] }
+jsonwebtoken  = { version = "10.4.0", default-features = false, features = ["rust_crypto"] }
+sha1          = "0.11.0"
+rand          = "0.10.1"
+base64        = "0.22"
+mime_guess    = "2"
+urlencoding   = "2"
+ai-provider-converter = { path = "../src-ai-provider-converter", version = "0.1.2" }
+url = "2.5.8"
+
+[profile.release]
+opt-level     = 3
+lto           = true
+codegen-units = 1
+strip         = true

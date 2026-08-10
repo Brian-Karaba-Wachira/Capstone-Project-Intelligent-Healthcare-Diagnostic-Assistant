@@ -1,6 +1,5 @@
 # ============================================================
 # MODULE 1: Intelligent Agent — Healthcare Diagnostic Agent
-# Covers: Week 2 (Intelligent Agents) + PEAS Framework
 # ============================================================
 
 from enum import Enum
@@ -155,28 +154,28 @@ class HealthcareDiagnosticAgent:
     def _generate_recommendations(self, urgency, results):
         base = {
             "CRITICAL": [
-                "🚨 Immediate emergency consultation required",
-                "📞 Alert attending physician now",
-                "🏥 Transfer to emergency ward",
-                "💊 Administer first-line medications"
+                " Immediate emergency consultation required",
+                " Alert attending physician now",
+                " Transfer to emergency ward",
+                " Administer first-line medications"
             ],
             "HIGH": [
-                "⚠️  Schedule urgent appointment within 24 hours",
-                "🧪 Order blood panel and cultures",
-                "💊 Prescribe symptomatic relief",
-                "📋 Monitor vitals every 2 hours"
+                "  Schedule urgent appointment within 24 hours",
+                " Order blood panel and cultures",
+                " Prescribe symptomatic relief",
+                " Monitor vitals every 2 hours"
             ],
             "MEDIUM": [
-                "📅 Schedule appointment within 3 days",
-                "💊 Over-the-counter treatment advised",
-                "🌡️  Monitor temperature twice daily",
-                "💧 Increase fluid intake"
+                " Schedule appointment within 3 days",
+                " Over-the-counter treatment advised",
+                "  Monitor temperature twice daily",
+                " Increase fluid intake"
             ],
             "LOW": [
-                "🏠 Home rest recommended",
-                "💧 Stay hydrated",
-                "📱 Follow up if symptoms worsen",
-                "📋 General wellness monitoring"
+                " Home rest recommended",
+                " Stay hydrated",
+                " Follow up if symptoms worsen",
+                " General wellness monitoring"
             ]
         }
         return base.get(urgency, base["LOW"])

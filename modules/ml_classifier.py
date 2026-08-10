@@ -5,6 +5,7 @@
 
 import numpy as np
 import pandas as pd
+from typing import Dict, List
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.preprocessing import LabelEncoder
